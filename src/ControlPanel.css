@@ -1,0 +1,11 @@
+.container {
+  background-color: #191919;
+  display: flex;
+}
+
+.resize-handle {
+  background-color: red;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+}

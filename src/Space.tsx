@@ -2,14 +2,15 @@ import { Component, onMount } from 'solid-js';
 import { Body } from './models/Body';
 import { Vec2 } from './models/Vec2';
 
-const Space: Component<{ G: number; bodies: Body[] }> = (props) => {
+const Space: Component<{ G: number; bodies: Body[]; size: Vec2}> = (props) => {
   const init = () => {
     const canvas = document.getElementById('screen') as HTMLCanvasElement;
-    canvas.width = window.visualViewport.width;
-    canvas.height = window.visualViewport.height;
+    canvas.width = props.size.X;
+    canvas.height = props.size.Y;
 
-    canvas.style.width = `${window.visualViewport.width}px`;
-    canvas.style.height = `${window.visualViewport.height}px`;
+    canvas.style.width = `${props.size.X}px`;
+    canvas.style.height = `${props.size.Y}px`;
+    canvas.style.backgroundColor = '#483d8b';
     return canvas;
   };
 
