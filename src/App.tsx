@@ -20,6 +20,7 @@ const App: Component = () => {
     window.visualViewport.height
   );
 
+  // TODO sharing width with space 
   return (
     <div class={styles.App}>
       <Space G={0.5} bodies={bodies} size={spaceSize} />
